@@ -11,9 +11,10 @@
     text-decoration: none;
 }
 
-/* Prevent horizontal scrolling */
+/* Body styles - dark background and hide horizontal overflow */
 body{
     overflow-x: hidden;
+    background: #222;
 }
 
 /* ============================================
@@ -296,7 +297,7 @@ nav .navlinks li a.active::after{
 .hero-unique{
     max-width: 1400px;
     margin: 0 auto;
-    padding: 80px 40px;
+    padding: 25px 40px;
 }
 
 .hero-grid{
@@ -901,6 +902,183 @@ nav .navlinks li a.active::after{
     background: #007ced;
     border-color: #007ced;
     color: white;
+}
+
+/* ============================================
+   CV DOWNLOAD SECTION
+   ============================================ */
+
+.cv-section{
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cv-section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(0, 124, 237, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.cv-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cv-content{
+    text-align: center;
+    background: #222;
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+}
+
+.cv-icon{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    background: linear-gradient(135deg, #007ced, #00d4ff);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce{
+    0%, 100%{ transform: translateY(0); }
+    50%{ transform: translateY(-10px); }
+}
+
+.cv-title{
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.cv-description{
+    color: #b0b0b0;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cv-buttons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.cv-download-btn, .cv-view-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cv-download-btn{
+    background: linear-gradient(135deg, #007ced, #00d4ff);
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 124, 237, 0.3);
+}
+
+.cv-download-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 124, 237, 0.5);
+}
+
+.cv-download-btn i{
+    animation: downloadPulse 2s ease-in-out infinite;
+}
+
+@keyframes downloadPulse{
+    0%, 100%{ transform: translateY(0); }
+    50%{ transform: translateY(3px); }
+}
+
+.cv-view-btn{
+    background: transparent;
+    color: #e5e5e5;
+    border: 2px solid #444;
+}
+
+.cv-view-btn:hover{
+    border-color: #007ced;
+    color: #007ced;
+    transform: translateY(-3px);
+}
+
+.cv-info{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    flex-wrap: wrap;
+}
+
+.cv-info-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+.cv-info-item i{
+    color: #007ced;
+    font-size: 16px;
+}
+
+/* Responsive CV Section */
+@media (max-width: 768px){
+    .cv-section{
+        padding: 60px 20px;
+    }
+    
+    .cv-content{
+        padding: 40px 30px;
+    }
+    
+    .cv-title{
+        font-size: 2rem;
+    }
+    
+    .cv-buttons{
+        flex-direction: column;
+    }
+    
+    .cv-download-btn, .cv-view-btn{
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .cv-info{
+        gap: 20px;
+    }
 }
 
 /* ============================================
