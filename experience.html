@@ -1,67 +1,128 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
-    <title>Cuong Ngo | Software Developer</title>
- </head>
- <body>
-    
- <header>
-  <nav class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">Cuong Ngo</a>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Experience | Cuong Ngo</title>
+</head>
+
+<body>
+    <header>
+      <div class="hero-header">
+        <div class="wrapper">
+          <header>
+            <div class="logo">
+              <i class="fa-solid fa-c"></i>
+              <div class="logo-text">Cuong Ngo</div>
+            </div>
+            <nav>
+              <div class="togglebtn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <ul class="navlinks">
+                <li><a href="cs.html">CS</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+              </ul>
+            </nav>
+          </header>
+        </div>
+
+<section class="projects-elegant">
+
+    <h1 class="elegant-title">Projects</h1>
+    <p class="elegant-subtitle">
+        A selection of software and game projects I've built across Web,
+        Mobile, Desktop, and Game Development. Each project reflects my
+        focus on clean design, good architecture, and practical implementation.
+    </p>
+
+    <div class="elegant-project-list">
+
+        <!-- PROJECT ITEM -->
+        <div class="project-item">
+            <h2>Appointment Booking System</h2>
+            <p>
+                A full-stack scheduling system with authentication, admin dashboard,
+                service management, and calendar-based appointment booking.
+            </p>
+            <div class="tags">
+                <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Sessions</span>
+            </div>
+            <a href="#" class="view-link"><i class="fa-brands fa-github"></i> View Code</a>
+        </div>
+
+        <div class="project-item">
+            <h2>Theater Ticket App</h2>
+            <p>
+                Android app using Jetpack Compose with seat selection, Firebase Auth,
+                payment flow, and Node.js backend. Smooth UI and modular architecture.
+            </p>
+            <div class="tags">
+                <span>Kotlin</span><span>Compose</span><span>Firebase</span><span>Node.js</span>
+            </div>
+            <a href="#" class="view-link"><i class="fa-brands fa-github"></i> View Code</a>
+        </div>
+
+        <div class="project-item">
+            <h2>HomeBudget WPF App</h2>
+            <p>
+                Desktop budget tracking application using MVP design, charts, and 
+                transaction visualization. Clean separation of UI and logic.
+            </p>
+            <div class="tags">
+                <span>C#</span><span>WPF</span><span>MVP</span>
+            </div>
+            <a href="#" class="view-link"><i class="fa-brands fa-github"></i> View Code</a>
+        </div>
+
+        <div class="project-item">
+            <h2>Pokémon RPG Clone</h2>
+            <p>
+                A 2D turn-based RPG built with JavaScript and Canvas, featuring custom
+                animations, combat system, XP progression, and type interactions.
+            </p>
+            <div class="tags">
+                <span>Javascript</span><span>Canvas</span><span>Game Engine</span>
+            </div>
+            <a href="#" class="view-link"><i class="fa-brands fa-github"></i> View Code</a>
+        </div>
+
+        <div class="project-item">
+            <h2>Mario Platformer</h2>
+            <p>
+                Tile-based 2D platformer with physics, sprite animations, enemies, 
+                collision detection, and smooth game loop.
+            </p>
+            <div class="tags">
+                <span>Javascript</span><span>Canvas</span><span>Physics</span>
+            </div>
+            <a href="#" class="view-link"><i class="fa-brands fa-github"></i> View Code</a>
+        </div>
+
+        <div class="project-item">
+            <h2>Angry Birds Clone</h2>
+            <p>
+                Physics puzzle game built using Matter.js with projectile mechanics,
+                destructible blocks, and smooth animations.
+            </p>
+            <div class="tags">
+                <span>Matter.js</span><span>Javascript</span>
+            </div>
+            <a href="#" class="view-link"><i class="fa-brands fa-github"></i> View Code</a>
+        </div>
+
     </div>
-    <div class="nav-right">
-      <a href="cs.html">CS</a>
-      <a href="projects.html">Projects</a>
-      <a href="experience.html">Experience</a>
-      <button id="themeToggle" class="theme-btn">🌙</button>
-    </div>
-  </nav>
-</header>
-<section class="page-section">
-    <h1>Projects</h1>
 
-    <div class="project-grid">
+</section>
 
-      <div class="project-card">
-        <h3>Appointment Booking System</h3>
-        <p>Full-stack platform built with React, Node.js, PostgreSQL, Sessions/Cookies.</p>
-        <a href="#" class="btn small">View Code</a>
       </div>
+    </header>
 
-      <div class="project-card">
-        <h3>Theater Ticket Booking</h3>
-        <p>Android Kotlin Jetpack Compose + Node/Express backend + Firebase Auth.</p>
-        <a href="#" class="btn small">View Code</a>
-      </div>
-
-      <div class="project-card">
-        <h3>HomeBudget WPF App</h3>
-        <p>Desktop financial tracking app using C#, WPF, MVP, DataVisualization Toolkit.</p>
-        <a href="#" class="btn small">View Code</a>
-      </div>
-
-      <div class="project-card">
-        <h3>Pokémon RPG Clone</h3>
-        <p>Turn-based combat, animations, experience system, and UI polish.</p>
-        <a href="#" class="btn small">View Code</a>
-      </div>
-
-      <div class="project-card">
-        <h3>Mario 2D Platformer</h3>
-        <p>Physics, hitboxes, sprite animations, power-ups, level design.</p>
-        <a href="#" class="btn small">View Code</a>
-      </div>
-
-      <div class="project-card">
-        <h3>Angry Birds Clone</h3>
-        <p>Matter.js physics, collision detection, bird abilities, pig logic.</p>
-        <a href="#" class="btn small">View Code</a>
-      </div>
-
-    </div>
-  </section>
+    <script src="script.js"></script>
+</body>
+</html>
