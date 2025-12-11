@@ -53,6 +53,13 @@ header{
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Logo hover effect - subtle lift */
+.logo:hover{
+    transform: translateY(-2px);
 }
 
 /* Logo icon - circular badge with letter */
@@ -65,9 +72,15 @@ header{
     font-weight: 700;
     font-size: 1.5rem;
     padding: 10px;
-    margin-right: 5px;
     cursor: pointer;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Logo icon hover effect */
+.logo:hover i{
+    background-color: #0099ff;
+    transform: rotate(5deg);
 }
 
 /* Logo text styling */
@@ -76,6 +89,12 @@ header{
     font-weight: 800;
     color: white;
     z-index: 5;
+    transition: color 0.3s ease;
+}
+
+/* Logo text hover effect */
+.logo:hover .logo-text{
+    color: #007ced;
 }
 
 /* Mobile hamburger menu button - hidden by default on desktop */
@@ -110,12 +129,48 @@ nav .navlinks{
 nav .navlinks li{
     color: white;
     display: inline-block;
+    position: relative;
 }
 
-/* Navigation link styling */
+/* Navigation link styling with smooth transitions */
 nav .navlinks li a{
     color: white;
     margin-right: 2.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Underline animation effect */
+nav .navlinks li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #007ced;
+    transition: width 0.3s ease;
+}
+
+/* Hover effect - change color and show underline */
+nav .navlinks li a:hover{
+    color: #007ced;
+}
+
+nav .navlinks li a:hover::after{
+    width: 100%;
+}
+
+/* Active page indicator */
+nav .navlinks li a.active{
+    color: #007ced;
+}
+
+nav .navlinks li a.active::after{
+    width: 100%;
 }
 
 /* ============================================
