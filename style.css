@@ -1,38 +1,61 @@
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+/* Reset default browser styles and set base font */
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: poppins, sans-serif;
-    text-decoration: none   ;
+    text-decoration: none;
 }
+
+/* Prevent horizontal scrolling */
 body{
     overflow-x: hidden;
 }
+
+/* ============================================
+   HERO HEADER SECTION
+   ============================================ */
+
+/* Full-screen hero header with dark background */
 .hero-header{
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background:#222
+    background: #222;
 }
+
+/* Container to center content and set max width */
 .wrapper{
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    }
+}
+
+/* ============================================
+   NAVIGATION & HEADER
+   ============================================ */
+
+/* Header layout: logo on left, nav on right */
 header{
     padding: 40px 0 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
 }
+
+/* Logo container with icon and text */
 .logo{
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Logo icon - circular badge with letter */
 .logo i{
     height: 45px;
     width: 45px;
@@ -46,12 +69,16 @@ header{
     cursor: pointer;
     text-align: center;
 }
+
+/* Logo text styling */
 .logo .logo-text{
     font-size: 24px;
     font-weight: 500;
     color: white;
     z-index: 5;
 }
+
+/* Mobile hamburger menu button - hidden by default on desktop */
 nav .togglebtn{
     width: 35px;
     height: 35px;
@@ -59,22 +86,43 @@ nav .togglebtn{
     top: 45px;
     right: 3%;
     z-index: 5;
+    display: none; /* Hidden on desktop, shown on mobile */
+    cursor: pointer;
 }
 
+/* Hamburger menu lines (3 horizontal bars) */
+nav .togglebtn span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #007ced;
+    margin: 6px 0;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+/* Navigation links container */
 nav .navlinks{
     list-style-type: none;
 }
 
+/* Navigation list items - displayed inline on desktop */
 nav .navlinks li{
-    color:white;
+    color: white;
     display: inline-block;
 }
 
+/* Navigation link styling */
 nav .navlinks li a{
     color: white;
-    margin-right: 2.5rem
+    margin-right: 2.5rem;
 }
 
+/* ============================================
+   HERO CONTENT SECTION
+   ============================================ */
+
+/* Main content container - profile pic on left, content on right */
 .container{
     display: flex;
     align-items: center;
@@ -82,6 +130,8 @@ nav .navlinks li a{
     gap: 20rem;
     padding-top: 4rem;
 }
+
+/* Profile picture container - circular with border */
 .container .hero-pic {
     width: 300px;
     height: 300px;
@@ -91,16 +141,19 @@ nav .navlinks li a{
     box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
 }
 
+/* Profile image - covers full container */
 .hero-pic img{
     width: 100%;
     height: 100%;
     transition: 0.5s;
 }
 
+/* Zoom effect on hover */
 .hero-pic img:hover{
     transform: scale(1.1);
 }
 
+/* Hero text content - introduction and description */
 .hero-text{
     max-width: 500px;
     display: flex;
@@ -108,28 +161,42 @@ nav .navlinks li a{
     gap: 1rem;
     color: rgb(235, 232, 232);
 }
+
+/* Subtitle text */
 .hero-text h5{
     color: #e5e5e5;
     font-size: 14px;
 }
+
+/* Highlighted text (used with Typed.js for dynamic typing effect) */
 .hero-text h5 span{
     color: #007ced;
     font-size: 16px;
 }
+
+/* Main heading - name */
 .hero-text h1{
     color: #007ced;
     font-size: 3rem;
 }
+
+/* Description paragraph */
 .hero-text p{
     color: #e5e5e5;
 }
 
+/* ============================================
+   BUTTONS & SOCIAL LINKS
+   ============================================ */
+
+/* Button group container */
 .btn-group{
     display: flex;
     gap: 1rem;
-    margin:  20px 0;
+    margin: 20px 0;
 }
 
+/* Button styling with hover effects */
 .btn-group .btn{
     padding: 12px 25px;
     border: 2px solid #9ea9b4;
@@ -142,7 +209,79 @@ nav .navlinks li a{
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Active/primary button state */
 .btn.active{
     background: #007ced;
     border: 2px solid #007ced;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE (≤768px)
+   ============================================ */
+
+@media (max-width: 768px){
+    /* Show hamburger menu button on mobile */
+    nav .togglebtn{
+        display: block;
+    }
+    
+    /* Navigation menu - slide in from right when active */
+    nav .navlinks{
+        position: absolute;
+        top: 80px;
+        right: -100%; /* Hidden off-screen by default */
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 15px rgba(0, 0, 0, 0.3);
+        transition: right 0.5s; /* Smooth slide animation */
+    }
+    
+    /* When menu is active, slide it into view */
+    nav .navlinks.active{
+        right: 0;
+    }
+    
+    /* Stack navigation items vertically on mobile */
+    nav .navlinks li{
+        display: block;
+        padding: 20px 0;
+        border-bottom: 1px solid #444;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Mobile navigation link styling */
+    nav .navlinks li a{
+        margin: 0;
+        font-size: 18px;
+        display: block;
+    }
+    
+    /* Hamburger to X animation - first line rotates down */
+    nav .togglebtn.click span:first-child{
+        transform: rotate(-45deg);
+        position: relative;
+        top: 9px;
+    }
+    
+    /* Middle line fades out */
+    nav .togglebtn.click span:nth-child(2){
+        opacity: 0;
+    }
+    
+    /* Last line rotates up to form X */
+    nav .togglebtn.click span:last-child{
+        transform: rotate(45deg);
+        position: relative;
+        top: -9px;
+    }
+    
+    /* Stack hero content vertically on mobile */
+    .container{
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
