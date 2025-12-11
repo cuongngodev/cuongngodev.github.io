@@ -11,6 +11,11 @@
     text-decoration: none;
 }
 
+/* Smooth scrolling for anchor links */
+html{
+    scroll-behavior: smooth;
+}
+
 /* Body styles - dark background and hide horizontal overflow */
 body{
     overflow-x: hidden;
