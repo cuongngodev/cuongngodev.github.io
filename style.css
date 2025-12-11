@@ -296,8 +296,8 @@ nav .navlinks li a.active::after{
 
 .hero-unique{
     max-width: 1400px;
-    margin: 0 auto;
-    padding: 25px 40px;
+    margin: 20px auto;
+    padding: 40px 40px 20px;
 }
 
 .hero-grid{
@@ -910,7 +910,7 @@ nav .navlinks li a.active::after{
 
 .cv-section{
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-    padding: 50px 20px;
+    padding: 20px 20px 60px;
     position: relative;
     overflow: hidden;
 }
@@ -937,7 +937,7 @@ nav .navlinks li a.active::after{
     text-align: center;
     background: #222;
     border-radius: 20px;
-    padding: 60px 40px;
+    padding: 30px 40px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     border: 1px solid #333;
 }
