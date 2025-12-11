@@ -181,9 +181,10 @@ nav .navlinks li a.active::after{
 .container{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 20rem;
+    gap: 25rem;
     padding-top: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Profile picture container - circular with border */
