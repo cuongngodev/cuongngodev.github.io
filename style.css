@@ -409,6 +409,69 @@ nav .navlinks li a.active::after{
     font-weight: 600;
 }
 
+/* Fun Fact Badge */
+.fun-fact-badge{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    gap: 15px;
+    background: linear-gradient(135deg, rgba(0, 124, 237, 0.1), rgba(0, 212, 255, 0.1));
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin-bottom: 35px;
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+    transition: all 0.3s ease;
+}
+
+.fun-fact-badge:hover{
+    transform: translateX(5px);
+    border-color: #00d4ff;
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+}
+
+.fun-emoji{
+    font-size: 32px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.fun-text{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    gap: 3px;
+}
+
+.fun-title{
+    color: #007ced;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.fun-text strong{
+    color: #e5e5e5;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.fun-subtitle{
+    color: #00d4ff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
 /* Quick Stats */
 .quick-stats{
     display: flex;
@@ -744,6 +807,24 @@ nav .navlinks li a.active::after{
     
     .floating-badge i{
         font-size: 14px;
+    }
+    
+    /* Fun Fact Badge - Mobile */
+    .fun-fact-badge{
+        padding: 12px 15px;
+        margin-bottom: 25px;
+    }
+    
+    .fun-emoji{
+        font-size: 26px;
+    }
+    
+    .fun-text strong{
+        font-size: 14px;
+    }
+    
+    .fun-subtitle{
+        font-size: 12px;
     }
 }
 
