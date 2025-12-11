@@ -524,3 +524,113 @@ nav .navlinks li a.active::after{
     color: white;
 }
 
+/* ============================================
+   FOOTER
+   ============================================ */
+
+/* Footer container with dark background */
+.footer{
+    background: #1a1a1a;
+    color: #e5e5e5;
+    padding: 60px 0 20px;
+    margin-top: 80px;
+}
+
+/* Footer content grid layout */
+.footer-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Individual footer section */
+.footer-section h3{
+    color: #007ced;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-section p{
+    color: #b0b0b0;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* Footer links list */
+.footer-links{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li{
+    margin-bottom: 12px;
+}
+
+.footer-links li a{
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-links li a:hover{
+    color: #007ced;
+}
+
+/* Footer social icons */
+.footer-social{
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b0b0b0;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover{
+    background: #007ced;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Footer bottom section */
+.footer-bottom{
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom p{
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+/* Responsive footer for mobile */
+@media (max-width: 768px){
+    .footer{
+        padding: 40px 0 20px;
+        margin-top: 60px;
+    }
+    
+    .footer-content{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
