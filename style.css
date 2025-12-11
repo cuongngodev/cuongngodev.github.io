@@ -1362,6 +1362,250 @@ nav .navlinks li a.active::after{
 }
 
 /* ============================================
+   EDUCATION SECTION
+   ============================================ */
+
+/* Education section container */
+.education-section{
+    background: #222;
+    padding: 80px 20px;
+}
+
+.education-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Education content layout */
+.education-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Education card */
+.education-card{
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    gap: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #007ced, #00d4ff);
+}
+
+.education-card:hover{
+    transform: translateY(-5px);
+    border-color: #007ced;
+    box-shadow: 0 10px 30px rgba(0, 124, 237, 0.2);
+}
+
+/* Education icon */
+.education-icon{
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    background: linear-gradient(135deg, #007ced, #00d4ff);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-icon i{
+    font-size: 32px;
+    color: white;
+}
+
+/* Education info */
+.education-info{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.education-degree{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.education-school{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #007ced;
+    font-weight: 500;
+    margin: 0;
+}
+
+.education-school i{
+    font-size: 14px;
+}
+
+.education-date{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+}
+
+.education-date i{
+    font-size: 13px;
+}
+
+/* Currently Learning card */
+.learning-card{
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 40px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.learning-card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #00d4ff, #007ced);
+}
+
+.learning-card:hover{
+    transform: translateY(-5px);
+    border-color: #00d4ff;
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+/* Learning header */
+.learning-header{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.learning-icon{
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: linear-gradient(135deg, #00d4ff, #007ced);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.learning-icon i{
+    font-size: 24px;
+    color: white;
+}
+
+.learning-title{
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Learning description */
+.learning-description{
+    font-size: 15px;
+    line-height: 1.7;
+    color: #d0d0d0;
+    margin: 0 0 20px 0;
+}
+
+.learning-description strong{
+    color: #00d4ff;
+    font-weight: 600;
+}
+
+/* Learning tags */
+.learning-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.learning-tag{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #2a2a2a;
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #e5e5e5;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.learning-tag i{
+    font-size: 14px;
+    color: #00d4ff;
+}
+
+.learning-tag:hover{
+    background: #333;
+    border-color: #00d4ff;
+    transform: translateY(-2px);
+}
+
+/* Responsive Education */
+@media (max-width: 768px){
+    .education-section{
+        padding: 60px 20px;
+    }
+    
+    .education-content{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .education-card{
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    .learning-card{
+        padding: 30px;
+    }
+    
+    .learning-tags{
+        gap: 10px;
+    }
+    
+    .learning-tag{
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 
