@@ -388,3 +388,84 @@ nav .navlinks li a{
     color: #cdcfe1;
     transform: translateX(4px);
 }
+
+/* ============================================
+   CS PAGE
+   ============================================ */
+
+.cs-elegant {
+    padding: 60px 10%;
+}
+
+.cs-title {
+    color: #007ced;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.cs-subtitle {
+    color: #e9e9e9; /* readable */
+    max-width: 720px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-size: 1.05rem;
+}
+
+/* Section container */
+.cs-section {
+    margin-bottom: 45px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.cs-section:last-child {
+    border-bottom: none;
+}
+
+.cs-section h2 {
+    color: #9ecbff;
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+}
+
+.cs-section h2 i {
+    margin-right: 8px;
+    color: #007ced;
+}
+
+.cs-section p {
+    color: #e6e6e6;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+/* Sub-headings */
+.cs-section h3 {
+    color: #cfe4ff;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+/* Skill badges */
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-badges span {
+    background: rgba(255,255,255,0.05);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #e9e9e9;
+    font-size: 0.85rem;
+    transition: 0.25s;
+}
+
+.skill-badges span:hover {
+    background: #007ced;
+    border-color: #007ced;
+    color: white;
+}
+
