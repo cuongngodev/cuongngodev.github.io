@@ -7,7 +7,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: poppins, sans-serif;
+    font-family: 'Manrope', sans-serif;
     text-decoration: none;
 }
 
@@ -72,8 +72,8 @@ header{
 
 /* Logo text styling */
 .logo .logo-text{
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 26px;
+    font-weight: 800;
     color: white;
     z-index: 5;
 }
@@ -305,4 +305,86 @@ nav .navlinks li a{
         flex-direction: column;
         gap: 2rem;
     }
+}
+
+/* ================================
+   PROJECT PAGE
+   ================================ */
+
+
+.projects-elegant {
+    padding: 60px 10%;
+}
+
+.elegant-title {
+    color: #007ced;
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.elegant-subtitle {
+    color: #dfd4d4;
+    max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-size: 1.05rem;
+}
+
+.elegant-project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* One elegant project block */
+.project-item {
+    padding: 2rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    transition: transform .25s ease, border-color .25s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-4px);
+    border-color: #214f7a;
+}
+
+.project-item h2 {
+    color: #579cea;
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+}
+
+.project-item p {
+    color: #dfd4d4;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Tech tags */
+.tags span {
+    background: #333;
+    color: #eee;
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    margin-right: 8px;
+}
+
+.view-link {
+    margin-top: 1rem;
+    display: inline-block;
+    color: #117df8;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.view-link i {
+    margin-right: 6px;
+}
+
+.view-link:hover {
+    color: #cdcfe1;
+    transform: translateX(4px);
 }
