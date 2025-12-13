@@ -409,6 +409,24 @@ nav .navlinks li a.active::after{
     font-weight: 600;
 }
 
+/* Hero Highlight - Internship announcement */
+.hero-highlight{
+    color: #e5e5e5;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 124, 237, 0.15));
+    border-left: 4px solid #00d4ff;
+    border-radius: 8px;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.hero-highlight strong{
+    color: #00d4ff;
+    font-weight: 700;
+}
+
 /* Fun Fact Badge */
 .fun-fact-badge{
     display: flex;
@@ -777,6 +795,12 @@ nav .navlinks li a.active::after{
     .hero-role{
         font-size: 18px;
         flex-wrap: wrap;
+    }
+    
+    .hero-highlight{
+        font-size: 14px;
+        padding: 12px 15px;
+        margin-bottom: 25px;
     }
     
     .quick-stats{
@@ -1164,6 +1188,191 @@ nav .navlinks li a.active::after{
     
     .cv-info{
         gap: 20px;
+    }
+}
+
+/* ============================================
+   UPDATES & NEWS SECTION
+   ============================================ */
+
+/* Updates section container */
+.updates-section{
+    background: #222;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.updates-container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Timeline layout */
+.updates-timeline{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    position: relative;
+}
+
+/* Vertical line for timeline */
+.updates-timeline::before{
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #007ced, #00d4ff, #007ced);
+    opacity: 0.3;
+}
+
+/* Individual update item */
+.update-item{
+    display: flex;
+    gap: 25px;
+    position: relative;
+    padding-left: 10px;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.update-item:nth-child(1){
+    animation-delay: 0.1s;
+}
+
+.update-item:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.update-item:nth-child(3){
+    animation-delay: 0.3s;
+}
+
+/* Update icon */
+.update-icon{
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    background: linear-gradient(135deg, #007ced, #00d4ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.update-icon i{
+    font-size: 24px;
+    color: white;
+}
+
+/* Update content */
+.update-content{
+    flex: 1;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 25px 30px;
+    transition: all 0.3s ease;
+}
+
+.update-content:hover{
+    border-color: #007ced;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 124, 237, 0.2);
+}
+
+/* Update date */
+.update-date{
+    display: inline-block;
+    color: #00d4ff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Update title */
+.update-title{
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+/* Update description */
+.update-description{
+    color: #b0b0b0;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0 0 15px 0;
+}
+
+/* Update tags */
+.update-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.update-tag{
+    display: inline-block;
+    background: rgba(0, 124, 237, 0.15);
+    border: 1px solid rgba(0, 124, 237, 0.3);
+    color: #007ced;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.update-tag:hover{
+    background: rgba(0, 124, 237, 0.25);
+    border-color: #007ced;
+    transform: translateY(-2px);
+}
+
+/* Responsive Updates Section */
+@media (max-width: 768px){
+    .updates-section{
+        padding: 60px 20px;
+    }
+    
+    .updates-timeline::before{
+        left: 20px;
+    }
+    
+    .update-item{
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 0;
+    }
+    
+    .update-icon{
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+    }
+    
+    .update-icon i{
+        font-size: 20px;
+    }
+    
+    .update-content{
+        padding: 20px;
+    }
+    
+    .update-title{
+        font-size: 18px;
+    }
+    
+    .update-description{
+        font-size: 14px;
     }
 }
 
