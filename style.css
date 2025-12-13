@@ -68,25 +68,38 @@ header{
     transform: translateY(-2px);
 }
 
-/* Logo icon - circular badge with letter */
+/* Logo icon - diamond badge with letter */
 .logo i{
-    height: 45px;
-    width: 45px;
-    background-color: #007ced;
-    border-radius: 50%;
-    color: white;
+    height: 60px;
+    width: 60px;
+    background: linear-gradient(135deg, rgba(0, 124, 237, 0.1), rgba(0, 212, 255, 0.1));
+    border: 3px solid #007ced;
+    color: #007ced;
     font-weight: 700;
     font-size: 1.5rem;
-    padding: 10px;
     cursor: pointer;
-    text-align: center;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 124, 237, 0.2);
+}
+
+/* Counter-rotate the letter to keep it upright */
+.logo i::before{
+    transform: rotate(-45deg);
+    display: block;
 }
 
 /* Logo icon hover effect */
 .logo:hover i{
-    background-color: #0099ff;
-    transform: rotate(5deg);
+    background: linear-gradient(135deg, #007ced, #00d4ff);
+    color: white;
+    border-color: #00d4ff;
+    transform: rotate(45deg) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
 }
 
 /* Logo text styling */
