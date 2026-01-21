@@ -624,11 +624,10 @@ nav .navlinks li a.active::after{
         transform: translateX(0);
     }
 }
-
 .profile-container{
     position: relative;
     width: 100%;
-    max-width: 450px;
+    max-width: 550px;
     margin: 0 auto;
 }
 
@@ -654,14 +653,16 @@ nav .navlinks li a.active::after{
     z-index: 1;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #007ced;
+    border: 3px solid #007ced;
     box-shadow: 0 20px 60px rgba(0, 124, 237, 0.3);
+    aspect-ratio: 1 / 1;
 }
 
 .profile-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 25% 20%;
     display: block;
 }
 
